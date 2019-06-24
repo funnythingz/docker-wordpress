@@ -17,7 +17,7 @@ services:
     restart: always
 
   mysql:
-    image: mysql:${MARIADB_VERSION:-latest}
+    image: mysql:${MYSQL_VERSION:-latest}
     container_name: mysql
     volumes:
       - ./mysql:/var/lib/mysql
