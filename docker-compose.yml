@@ -28,6 +28,7 @@ services:
       - MYSQL_DATABASE=${MYSQL_DATABASE:-wordpress}
     restart: always
     user: "1000:50"
+    command: --innodb-use-native-aio=0
 
   nginx:
     image: nginx:${NGINX_VERSION:-latest}
